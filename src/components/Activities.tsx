@@ -32,7 +32,7 @@ const activities = [
 
 export default function Activities() {
   return (
-    <section className="py-16 px-6 bg-gray-100">
+    <section id="activities" className="py-16 px-6 bg-gray-100">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
         Popular Activities
       </h2>

@@ -18,7 +18,11 @@
 
 'use client';
 
+import { useState } from 'react';
+
 export default function Hero() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <section
       className="relative h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
@@ -34,20 +38,43 @@ export default function Hero() {
 
         {/* Square Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <button className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transition">
-            Explore Activities
-          </button>
-          <button className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transition">
-            Get A Quote
-          </button>
-          <button className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transition">
+          <a href="#activities">
+            <button className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transition">
+              Explore Activities
+            </button>
+          </a>
+          <a href="#quote">
+            <button className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transitio">Get A Quote</button>
+          </a>
+
+          <button 
+            onClick={() => setShowModal(true)}
+            className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transition">
             Book Now
           </button>
         </div>
+
+        {showModal && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+            <div className="bg-white text-black p-6 rounded-lg shadow-lg max-w-md w-full relative">
+              <button
+                className="absolute top-2 right-2 text-xl text-gray-600 hover:text-gray-800"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+              <h2 className="text-xl font-semibold mb-2">Bookings on Call</h2>
+              <p className="mb-4">Bookings are currently done via phone call.</p>
+              <p className="mb-2 font-semibold">📞 <a href="tel:+91XXXXXXXXXX" className="text-rose-600 hover:underline">+91-9920585223</a></p>
+              <p className="text-sm text-gray-500">Available from 10 AM – 8 PM</p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
 }
+
 
 
 
