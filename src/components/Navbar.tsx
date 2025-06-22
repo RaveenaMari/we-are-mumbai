@@ -6,7 +6,7 @@ import { FaAngleDown } from 'react-icons/fa';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLElement | null>(null);
+  const menuRef = useRef<HTMLUListElement | null>(null);
 
 
   // Close on outside click
