@@ -21,7 +21,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-3 md:px-6 py-4 flex items-center justify-between bg-purple-900/40 backdrop-blur-sm text-white">
+    <nav className="fixed top-0 left-0 w-full z-50 px-3 md:px-6 py-4 flex items-center justify-between bg-black backdrop-blur-sm text-white">
       <h1 className="text-2xl font-bold">We Are Mumbai</h1>
 
       {/* Desktop Menu */}
@@ -225,7 +225,7 @@ export default function Navbar() {
             </ul>
           </div>
 
-          <div>
+          <div className="mr-auto">
             <p className="font-semibold mb-2">More</p>
             <ul className="space-y-1">
               {[{ name: 'About', href: '#about' }, { name: 'Contact', href: '#contact' }, { name: 'FAQs', href: '#contact' }].map(link => (
