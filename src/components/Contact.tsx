@@ -1,11 +1,10 @@
 'use client';
 import { useState } from 'react';
-import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -115,7 +114,7 @@ export default function Contact() {
               <p>Carry a valid ID, comfortable footwear, and your booking confirmation. We recommend a light bag and lots of good vibes!</p>
             </div>
             <div>
-              <h4 className="font-semibold">What if I’m late?</h4>
+              <h4 className="font-semibold">What if I&apos;m late?</h4>
               <p>We recommend arriving 10 minutes early. If you're late, contact the host. We may not be able to accommodate late arrivals once the activity starts.</p>
             </div>
             <div>
@@ -127,7 +126,7 @@ export default function Contact() {
               <p>Yes — we ensure host verification and group safety protocols. Follow instructions, drink responsibly, and respect other attendees.</p>
             </div>
             <div>
-              <h4 className="font-semibold">What’s your cancellation/refund policy?</h4>
+              <h4 className="font-semibold">What&apos;s your cancellation/refund policy?</h4>
               <p>Free cancellation up to 24 hours before the event. No-shows or last-minute cancellations may not be refunded.</p>
             </div>
           </div>

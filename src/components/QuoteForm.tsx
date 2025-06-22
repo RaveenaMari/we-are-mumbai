@@ -1,13 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import toast, { Toaster } from 'react-hot-toast';
 
 
 export default function QuoteForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -52,7 +51,8 @@ export default function QuoteForm() {
               🎉 Thank you! We’ve received your quote request.
             </div>
           ) : (
-        <form 
+        <form
+          onSubmit={handleSubmit}
           action="https://formspree.io/f/xvgrwono"
           method="POST" 
           className="space-y-4">

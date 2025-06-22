@@ -11,7 +11,7 @@ export default function Navbar() {
   // Close on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !(menuRef.current as any).contains(event.target)) {
+      if (menuRef.current && !(menuRef.current as HTMLElement).contains(event.target)) {
         setMobileMenuOpen(false);
       }
     };
@@ -239,3 +239,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

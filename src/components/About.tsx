@@ -7,7 +7,7 @@ export default function About() {
         <h2 className="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
 
         <p className="text-gray-700 text-lg leading-relaxed mb-6">
-          <strong>Born from a love for Mumbai’s nightlife</strong>, We Are Mumbai is a passion project turned movement — dedicated to connecting people through unique, curated experiences across the city. Whether you're a local or just visiting, our goal is simple: help you feel the pulse of Mumbai like a true insider.
+          <strong>Born from a love for Mumbai&apos;s nightlife</strong>, We Are Mumbai is a passion project turned movement — dedicated to connecting people through unique, curated experiences across the city. Whether you're a local or just visiting, our goal is simple: help you feel the pulse of Mumbai like a true insider.
         </p>
 
         <p className="text-gray-700 text-lg leading-relaxed mb-10">
@@ -30,7 +30,7 @@ export default function About() {
           <div className="bg-white shadow-md rounded-lg p-6">
             <h3 className="text-xl font-semibold text-rose-600 mb-2">Our City</h3>
             <p className="text-gray-600">
-              Mumbai is more than a destination — it’s a feeling. And we’re here to help you feel every beat of it.
+              Mumbai is more than a destination — it&apos;s a feeling. And we&apos;re here to help you feel every beat of it.
             </p>
           </div>
         </div>
