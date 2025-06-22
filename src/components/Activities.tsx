@@ -5,27 +5,27 @@ import ActivityCard from "./ActivityCard";
 const activities = [
   {
     title: "Ultimate Parties",
-    imageUrl: "/images/pubcrawl.jpg",
+    imageUrl: "/images/PubCrawl.jpg",
     description: "Explore the city's best bars in one wild night.",
   },
   {
     title: "Workshops",
-    imageUrl: "/images/workshops.jpg",
+    imageUrl: "/images/Pottery.png",
     description: "Cruise along the Arabian Sea with music and drinks.",
   },
   {
     title: "Unique Experiences",
-    imageUrl: "/images/dance.jpg",
+    imageUrl: "/images/beerbike.jpg",
     description: "Learn energetic moves from pro Bollywood choreographers.",
   },
   {
     title: "City Tours",
-    imageUrl: "/images/foodtour.jpg",
+    imageUrl: "/images/trek.jpg",
     description: "Taste authentic Mumbai street food from local spots.",
   },
   {
     title: "Corporate Events",
-    imageUrl: "/images/corporateevents.jpg",
+    imageUrl: "/images/corporateevent.jpg",
     description: "Taste authentic Mumbai street food from local spots.",
   },
 ];

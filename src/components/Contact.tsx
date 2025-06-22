@@ -1,7 +1,40 @@
 'use client';
+import { useState } from 'react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      toast.success("🎉 Thank you! Your message has been sent.");
+      // setSubmitted(true);
+      form.reset();
+    } else {
+      toast.error("❌ Something went wrong. Please try again later.");
+      // alert('Something went wrong. Please try again later.');
+    }
+  };
+
   return (
+  <>
+    <Toaster position="top-right" />
+    {/* <section id="quote" className="py-16 px-6 bg-rose-50"> */}
+        
     <section id="contact" className="py-20 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">Contact Us</h2>
@@ -15,23 +48,62 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <form className="bg-gray-100 p-6 rounded-lg shadow space-y-4">
-            <div>
-              <label className="block mb-1 text-sm font-medium">Name</label>
-              <input type="text" className="w-full px-4 py-2 rounded border" />
-            </div>
-            <div>
-              <label className="block mb-1 text-sm font-medium">Email</label>
-              <input type="email" className="w-full px-4 py-2 rounded border" />
-            </div>
-            <div>
-              <label className="block mb-1 text-sm font-medium">Message</label>
-              <textarea className="w-full px-4 py-2 rounded border h-32 resize-none"></textarea>
-            </div>
-            <button type="submit" className="bg-rose-600 text-white px-6 py-2 rounded hover:bg-rose-700 transition">
-              Send Message
-            </button>
-          </form>
+          <div className="bg-gray-100 p-6 rounded-lg shadow space-y-4">
+            {submitted ? (
+              <div className="text-green-600 font-medium text-center">
+                🎉 Thank you! Your message has been sent.
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                action="https://formspree.io/f/xvgrwono" // replace with your Formspree form ID
+                method="POST"
+                className="space-y-4"
+              >
+                {/* Hidden field to tag form origin */}
+                <input type="hidden" name="form-source" value="Contact Form" />
+
+                <div>
+                  <label className="block mb-1 text-sm font-medium">Name</label>
+                  <input
+                    name="name"
+                    required
+                    type="text"
+                    placeholder="Your Name*"
+                    className="w-full px-4 py-2 rounded border"
+                  />
+                </div>
+
+                <div>
+                  <label className="block mb-1 text-sm font-medium">Email</label>
+                  <input
+                    name="email"
+                    required
+                    type="email"
+                    placeholder="you@example.com"
+                    className="w-full px-4 py-2 rounded border"
+                  />
+                </div>
+
+                <div>
+                  <label className="block mb-1 text-sm font-medium">Message</label>
+                  <textarea
+                    name="message"
+                    required
+                    placeholder="Type your message here..."
+                    className="w-full px-4 py-2 rounded border h-32 resize-none"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="bg-rose-600 text-white px-6 py-2 rounded hover:bg-rose-700 transition"
+                >
+                  Send Message
+                </button>
+              </form>
+            )}
+          </div>
         </div>
 
         {/* FAQs */}
@@ -62,5 +134,6 @@ export default function Contact() {
         </div>
       </div>
     </section>
+  </>
   );
 }
