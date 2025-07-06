@@ -4,7 +4,7 @@ const bookingNumber = process.env.NEXT_PUBLIC_BOOKING_CONTACT_NO;
 const instaLink = process.env.NEXT_PUBLIC_INSTAGRAM_URL;
 
 import { useState } from 'react';
-import PaymentButton from '@/components/PaymentButton';
+// import PaymentButton from '@/components/PaymentButton';
 
 
 export default function Hero() {
@@ -40,7 +40,7 @@ export default function Hero() {
             Book Now
           </button>
 
-          <PaymentButton />
+          {/* <PaymentButton /> */}
 
         </div>
 
