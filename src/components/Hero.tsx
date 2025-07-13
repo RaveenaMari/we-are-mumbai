@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       className="relative h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/night.jpg')" }}
+      style={{ backgroundImage: "url('/images/night2.jpg')" }}
     >
       {/* Gradient overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-br from-indigo-800 to-purple-700 opacity-50"></div> */}
@@ -26,17 +26,18 @@ export default function Hero() {
         {/* Square Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <a href="#activities">
-            <button className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transition">
+            <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded shadow">
               Explore Activities
             </button>
           </a>
           <a href="#quote">
-            <button className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transitio">Get A Quote</button>
+            <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded shadow">Get A Quote</button>
+            {/* <button className="w-42 h-15 bg-blue-700 text-white font-semibold rounded-sm shadow hover:bg-blue-800 transition">Get A Quote</button> */}
           </a>
 
           <button 
             onClick={() => setShowModal(true)}
-            className="w-42 h-15 bg-white text-rose-600 font-semibold rounded-sm shadow hover:bg-gray-100 transition">
+            className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded shadow">
             Book Now
           </button>
 
@@ -58,7 +59,7 @@ export default function Hero() {
 
               {/* Phone link */}
               <p className="mb-2 font-semibold">
-                📞 <a href="tel:${bookingNumber}" className="text-rose-600 hover:underline">
+                📞 <a href="tel:${bookingNumber}" className="text-blue-600 hover:underline">
                       {bookingNumber || '+91-9920585223'}</a>
               </p>
 

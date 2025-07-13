@@ -17,7 +17,7 @@ export default function ActivityCard({ title, imageUrl, description }: Props) {
       <div className="p-4">
         <h3 className="text-lg font-bold text-gray-800 mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-4">{description}</p>
-        <button className="bg-rose-600 text-white px-4 py-2 rounded-md hover:bg-rose-700 text-sm">
+        <button className="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 text-sm">
           View More
         </button>
       </div>

@@ -63,11 +63,11 @@ export default function QuoteForm() {
   return (
   <>
     <Toaster position="top-right" />
-    <section id="quote" className="py-16 px-6 bg-rose-50">
+    <section id="quote" className="py-16 px-6 bg-purple-50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Left: Description */}
         <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-bold text-rose-600 mb-4">Get A Quick Quote</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-purple-600 mb-4">Get A Quick Quote</h2>
           <p className="text-gray-700">
             Our Fun Agents are always ready to help you book the best activities in town.
           </p>
@@ -116,7 +116,7 @@ export default function QuoteForm() {
 
             <button
               type="submit"
-              className="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition"
+              className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-xl transition"
             >
               Submit Quote Request
             </button>
