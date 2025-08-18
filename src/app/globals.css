@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,3 +37,38 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
+@keyframes spotlight {
+  0% { transform: translate(-25%, -25%) rotate(0deg); }
+  50% { transform: translate(25%, 25%) rotate(180deg); }
+  100% { transform: translate(-25%, -25%) rotate(360deg); }
+}
+
+@keyframes spotlight-delay {
+  0% { transform: translate(25%, -25%) rotate(0deg); }
+  50% { transform: translate(-25%, 25%) rotate(-180deg); }
+  100% { transform: translate(25%, -25%) rotate(-360deg); }
+}
+
+.animate-spotlight {
+  animation: spotlight 12s linear infinite;
+  mix-blend-mode: screen;
+}
+
+.animate-spotlight-delay {
+  animation: spotlight-delay 15s linear infinite;
+  mix-blend-mode: screen;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } /* only move half because we duplicate */
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%; /* double width */
+  animation: marquee 30s linear infinite; /* 30s = slower, increase for more */
+}
+

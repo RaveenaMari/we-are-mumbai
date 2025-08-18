@@ -1,90 +1,55 @@
 'use client';
 
-const bookingNumber = process.env.NEXT_PUBLIC_BOOKING_CONTACT_NO;
-const instaLink = process.env.NEXT_PUBLIC_INSTAGRAM_URL;
-
-import { useState } from 'react';
-// import PaymentButton from '@/components/PaymentButton';
-
+import Image from "next/image";
 
 export default function Hero() {
-  const [showModal, setShowModal] = useState(false);
-
   return (
-    <section
-      className="relative h-[90vh] flex items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/night2.jpg')" }}
-    >
-      {/* Gradient overlay */}
-      {/* <div className="absolute inset-0 bg-gradient-to-br from-indigo-800 to-purple-700 opacity-50"></div> */}
+    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-black">
+      {/* Animated Disco Lights */}
+      <div className="absolute inset-0">
+        <div className="w-[200%] h-[200%] animate-spotlight bg-[radial-gradient(circle_at_center,rgba(255,0,150,0.4),transparent_60%)]"></div>
+        <div className="absolute inset-0 w-[200%] h-[200%] animate-spotlight-delay bg-[radial-gradient(circle_at_top_left,rgba(0,200,255,0.3),transparent_70%)]"></div>
+      </div>
+
+      {/* ✅ Logo top-left */}
+      <div className="absolute top-6 left-6 z-20">
+        <Image
+          src="/images/logo.jpeg"
+          alt="Ultimate Mumbai Logo"
+          width={100} // adjust size as needed
+          height={100}
+          className="rounded-full shadow-lg"
+        />
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-6">
-        <h2 className="text-4xl font-bold mb-4">Discover Mumbai Like Never Before</h2>
-        <p className="mb-6">Fun events, curated experiences, unforgettable nights.</p>
+      <div className="relative z-10 text-center px-6">
+        <h2
+          className="text-5xl md:text-6xl font-extrabold mb-4 text-white"
+          style={{ textShadow: "0 0 15px #ff00ff, 0 0 30px #8000ff" }}
+        >
+          Ultimate Mumbai
+        </h2>
 
-        {/* Square Buttons */}
+        <p className="mb-6 text-lg md:text-xl text-gray-200">
+          Nightlife 🌃 · Pub Crawls 🍻 · Ultimate Experiences 🎶
+        </p>
+
+        {/* Funky Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <a href="#activities">
-            <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded shadow">
-              Explore Activities
+            <button className="px-8 py-3 rounded-full font-bold text-white bg-gradient-to-r from-pink-500 to-purple-600 shadow-lg hover:scale-110 hover:shadow-2xl transition transform">
+              🚀 Explore Activities
             </button>
           </a>
-          <a href="#quote">
-            <button className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded shadow">Get A Quote</button>
-            {/* <button className="w-42 h-15 bg-blue-700 text-white font-semibold rounded-sm shadow hover:bg-blue-800 transition">Get A Quote</button> */}
+
+          <a href="#contact">
+            <button className="px-8 py-3 rounded-full font-bold text-white bg-gradient-to-r from-blue-500 to-cyan-600 shadow-lg hover:scale-110 hover:shadow-2xl transition transform">
+              ✨ Contact Us
+            </button>
           </a>
-
-          <button 
-            onClick={() => setShowModal(true)}
-            className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 px-6 rounded shadow">
-            Book Now
-          </button>
-
-          {/* <PaymentButton /> */}
-
         </div>
-
-        {showModal && (
-          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-white text-black p-6 rounded-lg shadow-lg max-w-md w-full relative">
-              <button
-                className="absolute top-2 right-2 text-xl text-gray-600 hover:text-gray-800"
-                onClick={() => setShowModal(false)}
-              >
-                ×
-              </button>
-              <h2 className="text-xl font-semibold mb-2">Bookings via Call or WhatsApp</h2>
-              <p className="mb-4 text-sm text-gray-700">We're currently taking bookings over phone or chat.</p>
-
-              {/* Phone link */}
-              <p className="mb-2 font-semibold">
-                📞 <a href="tel:${bookingNumber}" className="text-blue-600 hover:underline">
-                      {bookingNumber || '+91-9920585223'}</a>
-              </p>
-
-              {/* WhatsApp link */}
-              <p className="mb-2 font-semibold">
-                💬 <a
-                  href="https://wa.me/${bookingNumber}?text=Hi%2C%20I%20want%20to%20book%20a%20party%20with%20We%20Are%20Mumbai!"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-600 hover:underline"
-                >
-                  Chat on WhatsApp
-                </a>
-              </p>
-
-              <p className="text-sm text-gray-500">Available 10 AM – 8 PM</p>
-
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
 }
-
-
-
-
