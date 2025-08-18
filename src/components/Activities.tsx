@@ -6,37 +6,30 @@ const activities = [
   {
     title: "Ultimate Parties",
     imageUrl: "/images/PubCrawl.jpg",
-    description: "Explore the city's best bars in one wild night.",
+    description: "Dance the night away at Mumbai's hottest parties.",
   },
   {
-    title: "Workshops",
-    imageUrl: "/images/Pottery.png",
-    description: "Cruise along the Arabian Sea with music and drinks.",
+    title: "Ultimate Pub Crawls",
+    imageUrl: "/images/PubCrawl.jpg",
+    description: "Hop through the best bars in one unforgettable night.",
   },
   {
     title: "Unique Experiences",
     imageUrl: "/images/beerbike.jpg",
-    description: "Learn energetic moves from pro Bollywood choreographers.",
-  },
-  {
-    title: "City Tours",
-    imageUrl: "/images/trek.jpg",
-    description: "Taste authentic Mumbai street food from local spots.",
-  },
-  {
-    title: "Corporate Events",
-    imageUrl: "/images/corporateevent.jpg",
-    description: "Taste authentic Mumbai street food from local spots.",
+    description: "Bollywood moves, beer bikes & more crazy memories.",
   },
 ];
 
 export default function Activities() {
   return (
-    <section id="activities" className="py-16 px-6 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">
+    <section
+      id="activities"
+      className="py-20 px-6 bg-gradient-to-b from-black via-[#0a0015] to-black text-white"
+    >
+      <h2 className="text-4xl font-extrabold text-center mb-14 drop-shadow-[0_0_15px_#ff00ff]">
         Popular Activities
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {activities.map((activity, idx) => (
           <ActivityCard key={idx} {...activity} />
         ))}

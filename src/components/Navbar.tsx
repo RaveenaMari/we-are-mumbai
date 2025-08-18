@@ -33,10 +33,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-3 md:px-6 py-4 flex items-center justify-between backdrop-blur-sm text-white">
-      <h1 className="text-2xl font-bold">Ultimate Mumbai</h1>
+    <nav className="fixed top-0 left-0 w-full z-50 px-3 md:px-6 py-4 flex items-center justify-end text-white bg-transparent">
 
-      <ul className="hidden md:flex gap-12 font-medium relative">
+    {/* <nav className="fixed top-0 left-0 w-full z-50 px-3 md:px-6 py-4 flex items-center justify-between backdrop-blur-sm text-white"> */}
+      <h1 className="text-2xl font-bold"></h1>
+
+      <ul className="hidden md:flex gap-12 font-bold relative">
         <li><a href="#" className="hover:text-blue-300 transition">Home</a></li>
 
         <li className="relative group">
@@ -71,39 +73,16 @@ export default function Navbar() {
               </div>
             </details>
 
-            {/* City Tours with submenu below */}
+            {/* Ultimate Parties with submenu below */}
             <details className="cursor-pointer">
               <summary className="flex items-center justify-between hover:bg-blue-100 px-2 py-1 rounded hover:text-blue-600 cursor-pointer list-none">
-                City Tours <FaAngleDown className="text-xs" />
+                Ultimate Pub Crawl <FaAngleDown className="text-xs" />
               </summary>
 
               <div className="mt-2 pl-4 space-y-1">
                 {[
-                  'Historical & Museum Tours',
-                  'Private Custom Tours',
-                  'Spiritual Tours',
-                  'Trekking Adventures',
-                ].map(item => (
-                  <div key={item} className="hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded cursor-pointer">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </details>
-
-            {/* Workshops with submenu below */}
-            <details className="cursor-pointer">
-              <summary className="flex items-center justify-between hover:bg-blue-100 px-2 py-1 rounded hover:text-blue-600 cursor-pointer list-none">
-                Workshops <FaAngleDown className="text-xs" />
-              </summary>
-
-              <div className="mt-2 pl-4 space-y-1">
-                {[
-                  'Pottery Workshop',
-                  'Waffle Workshop',
-                  'Cocktail Workshop',
-                  'Yoga Workshop',
-                  'Bollywood Dance Workshop'
+                  'Pub Crawl',
+                  'Karaoke Party'
                 ].map(item => (
                   <div key={item} className="hover:text-blue-600 hover:bg-blue-100 px-2 py-1 rounded cursor-pointer">
                     {item}
@@ -113,7 +92,7 @@ export default function Navbar() {
             </details>
 
             {/* Corporate Events with submenu below */}
-            <details className="cursor-pointer">
+            {/* <details className="cursor-pointer">
               <summary className="flex items-center justify-between hover:bg-blue-100 px-2 py-1 rounded hover:text-blue-600 cursor-pointer list-none">
                 Corporate Events <FaAngleDown className="text-xs" />
               </summary>
@@ -130,7 +109,7 @@ export default function Navbar() {
                   </div>
                 ))}
               </div>
-            </details>
+            </details> */}
 
             {/* Unique Experiences with submenu below */}
             <details className="cursor-pointer">
