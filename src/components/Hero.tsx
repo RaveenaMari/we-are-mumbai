@@ -14,7 +14,7 @@ export default function Hero() {
       {/* ✅ Logo top-left */}
       <div className="absolute top-6 left-6 z-20">
         <Image
-          src="/images/logo.jpeg"
+          src="/images/logo2.jpeg"
           alt="Ultimate Mumbai Logo"
           width={100} // adjust size as needed
           height={100}

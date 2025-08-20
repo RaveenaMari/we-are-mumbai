@@ -39,7 +39,7 @@ export default function Navbar() {
       <h1 className="text-2xl font-bold"></h1>
 
       <ul className="hidden md:flex gap-12 font-bold relative">
-        <li><a href="#" className="hover:text-blue-300 transition">Home</a></li>
+        <li><a href="/" className="hover:text-blue-300 transition font-bold">Home</a></li>
 
         <li className="relative group">
           <div className="flex items-center gap-1 hover:text-blue-300 transition cursor-pointer">

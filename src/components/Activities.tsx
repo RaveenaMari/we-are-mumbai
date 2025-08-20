@@ -17,6 +17,7 @@ const activities = [
     title: "Unique Experiences",
     imageUrl: "/images/beerbike.jpg",
     description: "Bollywood moves, beer bikes & more crazy memories.",
+    comingSoon: true,
   },
 ];
 
