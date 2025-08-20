@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaFacebookF, FaInstagram, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Contact() {
   const [submitted] = useState(false);
